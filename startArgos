@@ -1,0 +1,9 @@
+#!/bin/bash 
+docker-compose build ;
+
+x11docker --workdir=/root/examples --hostdisplay --network=host --user=RETAIN -- --privileged -v HOST_FOLDER:/root/examples/log  -- simulation argos3 -c ./experiments/crazyflie_sensing.argos
+
+docker exec -it $(docker container ls -q) /bin/bash
+
+# docker-compose up --build
+# export containerId=$(docker ps -l -q)

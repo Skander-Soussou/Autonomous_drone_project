@@ -1,0 +1,48 @@
+
+body > div {
+    background-color: #1C1C1C;
+    height: 100%;
+
+}
+
+.drone-button{
+   
+    display: inline-block;
+    width: 300px;
+    position: fixed;
+    top: 70%;
+    left: 45%;
+    transform: translate(-50%, 50%);
+}
+.argos-button{
+    display: inline-block;
+    width: 300px;
+    position: fixed;
+    top: 70%;
+    left: 65%;
+    transform: translate(-50%, 50%);
+}
+
+@media only screen and (min-width: 768px) {
+    /* For mobile phones: */
+    .drone-button{
+        top: 60%;
+        left: 30%;
+    }
+    .argos-button{
+        top: 60%;
+        left: 70%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .drone-button{
+        top: 70%;
+        left: 50%;
+    }
+    .argos-button{
+        top: 80%;
+        left: 50%;
+    }
+}

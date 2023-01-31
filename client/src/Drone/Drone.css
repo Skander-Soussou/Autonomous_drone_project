@@ -1,0 +1,16 @@
+.drone {
+    
+};
+
+.mission {
+    display: block;
+    position: absolute;
+    bottom: 0%
+}
+
+.carte {
+    display: block;
+    position: absolute;
+    left:50%;
+    top:0%; 
+}

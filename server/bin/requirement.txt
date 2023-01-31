@@ -1,0 +1,6 @@
+flask==2.0.1
+Flask-Cors==3.0.1
+Flask_SocketIO
+cflib==0.1.13.1
+pytest
+asgi-dispatcher-middleware

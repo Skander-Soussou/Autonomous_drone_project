@@ -1,0 +1,45 @@
+version: "3.9" 
+
+services:
+  # api:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   image: api
+  
+  # client:
+  #   build:
+  #     context: ./client
+  #     dockerfile: Dockerfile
+  #   image: client
+  #   ports:
+  #     - "3000:3000"
+
+  # simulation:
+  #   build: 
+  #     context: ./server
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "5001:5001"
+  #     - "6000:6000"
+  #     - "6001:6001"
+  #   image: simulation
+  #   container_name: simulation
+
+  simulation: #image name
+    # specifies a directory  with a dockerfile inside to build (assumes that we are at the docker compose file level)
+    # to build the image
+    # /path/to/dir/Dockerfile
+    # <project>_<service>
+    build: 
+      context: ./simulation
+      dockerfile: Dockerfile
+
+    image: simulation
+    container_name: simulation
+
+    ports:
+      - "6001:6001"
+
+    privileged: true
+
